@@ -1,3 +1,7 @@
-body {
-    background: red; 
+.app {
+    &__body {
+        font-family: 'Montserrat';
+        
+        color: #ffffff;
+    } 
 }

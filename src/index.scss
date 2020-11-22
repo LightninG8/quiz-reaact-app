@@ -1,0 +1,14 @@
+@import "./fonts/OpenSans/opensans.css";
+@import "./fonts/Montserrat/montserrat.css";
+@import "./styles/normalize";
+@import "./styles/all";
+
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    
+    background: url("./img/app/background.jpg");
+    background-size: cover;
+}

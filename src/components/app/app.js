@@ -1,16 +1,18 @@
 import React from 'react';
 
-import './App.scss';
+import './app.scss';
 
-
-import AppHeader from '../app-header';
+import AppHeader from "../app-header";
+import AppHero from "../app-hero";
 
 function App() {
-  return (
-    <div className="App">
-      <AppHeader></AppHeader>
-      Hello World!
-    </div>
+	return (
+		<div className="app">
+			<div className="app__body">
+				<AppHeader></AppHeader>
+				<AppHero></AppHero>
+			</div>    
+		</div>
   );
 }
 
