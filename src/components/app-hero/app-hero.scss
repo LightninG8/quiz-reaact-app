@@ -4,4 +4,196 @@
         justify-content: space-between;
         padding-bottom: 60px;
     }
+
+    &__description {
+        position: relative;
+        margin-left: 70px;
+        margin-top: 190px;
+        max-width: 434px;
+    }
+
+    &__title {
+        /* ПРИМЕРКА ОДЕЖДЫ В AR */
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 6.4rem;
+        line-height: 110%;
+        /* or 70px */
+
+        margin: 0px;
+
+        color: #FFFFFF;
+
+        &_highlighted {
+            color: #C7EE86;
+        }
+    }
+
+    &__subtitle {
+        /* Посмотри, как будет сидеть одежда на твоем теле не выходя из дома */
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.1rem;
+        line-height: 110%;
+        /* or 23px */
+
+        margin: 50px 0 0 0;
+
+        color: #C7EE86;
+    }
+
+    &__button {
+        position: relative;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.1rem;
+        line-height: 105px;
+        text-align: center;
+        text-decoration: none;
+
+        display: block;
+        width: 330px;
+        height: 105px;
+        margin-top: 60px;
+
+        border-radius: 79px;
+        background: #483707;
+
+        transition: 0.1s;
+
+        &:before {
+            /* ПОПРОБУЙТЕ САМИ */
+            content: "ПОПРОБУЙТЕ САМИ";
+            top: -4px;
+            position: relative;
+
+            display: block;
+            width: 330px;
+            height: 105px;
+
+            background: #F6BD1A;
+            box-shadow: 0px 0px 50px rgba(246, 189, 26, 0.5), inset 0px -4px 17px rgba(199, 238, 134, 0.63);
+            border-radius: 79px;
+
+            color: #262626;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 50px rgba(246, 189, 26, 0.5), inset 0px -4px 17px rgba(199, 238, 134, 0.63);
+        }
+    }
+
+    &__leaf {
+        position: absolute;
+        bottom: 80px;
+        left: -145px;
+        /* Листай ниже */
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        /* or 15px */
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+
+        transform: rotate(-90deg);
+    }
+
+    &__arrow {
+        margin-right: 52px;
+        transform: rotate(90deg);
+
+    }
+
+    &__advantages {
+        position: relative;
+        padding-top: 120px;
+    }
+}
+
+.advantages {
+    &__dummy {
+        position: relative;
+        z-index: -1;
+    }
+
+    &__circles {
+        position: absolute;
+        max-width: 844px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-52%, -51%);
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        z-index: 50;
+    }
+
+    &__advantages {
+        position: absolute;
+        left: -455px;
+
+        width: 100%;        
+
+        list-style: none;
+    }
+
+    &__advantage {
+        position: absolute;
+        right: 0;
+        
+        z-index: 100;
+
+        &:nth-child(1) {
+            right: -96px;
+
+            max-width: 274px;
+        }
+        &:nth-child(2) {
+            top: 223px;
+
+            max-width: 198px;
+        }
+        &:nth-child(3) {
+            top: 465px;
+
+            max-width: 173px;
+        }
+        &:nth-child(4) {
+            top: 687px;
+            right: -96px;
+            
+            max-width: 222px;
+        }
+    }
+
+    &__advantage_title {
+        /* Удобство */
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+        /* identical to box height */
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    &__advantage_subtitle {
+        /* Теперь не нужно выходить из дома, чтобы померить на себе одежду */
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+
+        margin-top: 7px;
+        color: #F6BD1A;
+    }
+
 }

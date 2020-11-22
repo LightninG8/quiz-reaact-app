@@ -5,10 +5,12 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 body {
     font-size: 1.6rem;
+    font-family: "Montserrat";
     
     background: url("./img/app/background.jpg");
-    background-size: cover;
+    background-repeat: repeat;
 }
