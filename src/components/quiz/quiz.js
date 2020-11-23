@@ -14,8 +14,9 @@ class Quiz extends React.Component {
         question: PropTypes.number,
         finishQuiz: PropTypes.func,
         nextQuestion: PropTypes.func,
+        prevQuestion: PropTypes.func,
         selectAnswer: PropTypes.func,
-        answersResult: PropTypes.object,
+        stepNumber: PropTypes.number,
     };
     constructor(props) {
         super(props);
@@ -290,7 +291,7 @@ class Quiz extends React.Component {
                         <label 
                             htmlFor={elem.id} 
                             className={`form-radio__label ${question.className}`} 
-                            onClick={() => {this.props.selectAnswer(elem.id);}}>
+                            onClick={() => this.props.selectAnswer(elem.id)}>
                                 {elem.value}
                         </label>
                     </div>
@@ -299,14 +300,14 @@ class Quiz extends React.Component {
         };
 
 
-        let question = DATA[index];
+        let curQuestion = DATA[index];
 
         return (
             (<>
-                <div className="quiz__title">{question.question}</div>
+                <div className="quiz__title">{curQuestion.question}</div>
                     <div className="quiz__question">
                         <form className="quiz__radio form-radio">   
-                            {renderAnswers(question)  }                                                  
+                            {renderAnswers(curQuestion)  }                                                  
                         </form>
                     </div>
                 </>)
@@ -318,10 +319,14 @@ class Quiz extends React.Component {
                 <div className="quiz__statusbar"></div>
                 <div className="quiz__controls">
                     {index + 1 === maxIndex ? 
-                        (<div className="button_outline quiz__button quiz__button_last" id="quiz__prev">
+                        (<div className="button_outline quiz__button quiz__button_last" id="quiz__prev" onClick={this.props.prevQuestion}>
                             <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
                         </div>) :
-                        (<div className="button_outline quiz__button" id="quiz__prev">
+                        index === 0 ? 
+                        (<div className="button_outline quiz__button quiz__button_disabled" id="quiz__prev">
+                            <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
+                        </div>) :
+                        (<div className="button_outline quiz__button" id="quiz__prev" onClick={this.props.prevQuestion}>
                             <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
                         </div>)
                     }

@@ -14,8 +14,16 @@ class QuestionArea extends Component {
             isStart: false,
             isFinish: false,
             resultWord: "",
-            curId: "",
-            result: {
+            curId: null,
+            history: [
+                {
+                    curId: null,
+                    questionCounter: 0,
+                }
+            ],
+            stepNumber: 0,
+            result: [],
+            resultList: {
                 male: {
                     xs: {
                         dress: {
@@ -191,7 +199,7 @@ class QuestionArea extends Component {
                     }
                 }
             },
-            questionCounter: 0,
+            
         };
     }
     startQuiz = () => {
@@ -200,44 +208,81 @@ class QuestionArea extends Component {
         }));      
     };
     finishQuiz = () => {
-        this.setState(() => ({
-            isStart: false,  
-            isFinish: true,
-        }));
+        if (this.state.curId) {
+            this.setState(() => ({
+                isStart: false,  
+                isFinish: true,
+            }));
+        }  
     };
     nextQuestion = () => {
+        console.log(this.state.curId);
+        
         if (!this.state.isFinish && this.state.curId) {
+            const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        
             this.setState(state => ({
-                questionCounter: state.questionCounter + 1,
+                history: state.history.concat([{
+                    questionCounter: state.history[history.length - 1].questionCounter + 1,
+                    curId: state.curId,
+                }]),
                 curId: null,
+                stepNumber: this.state.stepNumber + 1,
+            }));
+        }
+    };
+    prevQuestion = () => {
+        if (!this.state.isFinish && this.state.stepNumber != 0) {     
+            this.setState(state => ({
+                stepNumber: this.state.stepNumber - 1,
+                result: state.result,
             }));
         }
     };
     modalWindow = (result) => {
+        let modal;
+
+        for (let i = 0; i < result.length; i++) {
+            modal = i === 0 ? this.state.resultList[result[i]] : modal[result[i]];
+        }
+
+        console.log(modal);
+
         return (
             <div>
-                {result.model}<br/>
+                {modal.model}<br/>
                 {this.state.resultWord}
             </div>
         );
     };
     selectAnswer = (id) => {
-        this.setState(state => ({
+        
+        let newResult = this.state.result.slice(0, this.state.stepNumber + 1);
+
+        newResult[this.state.stepNumber] = id;
+
+        this.setState( () => ({
+            resultWord: newResult.join(" "),
             curId: id,
-            resultWord: state.resultWord + " " + id,
-            result: state.result[id],
+            result: newResult,
         }));
+        console.log(newResult);
+
     };
     render() {
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+
         return (
             <div className="questions__area">
                 {this.state.isStart ?
                     (<Quiz 
-                        question={this.state.questionCounter} 
-                        nextQuestion={this.nextQuestion} 
+                        question={current.questionCounter} 
+                        nextQuestion={this.nextQuestion}
+                        prevQuestion={this.prevQuestion} 
                         finishQuiz={this.finishQuiz} 
                         selectAnswer={this.selectAnswer} 
-                        answersResult={this.state.result}/>) :
+                        stepNumber={this.stepNumber} />) :
                         this.state.isFinish ? 
                         (<div className="modal">
                             {this.modalWindow(this.state.result)}
