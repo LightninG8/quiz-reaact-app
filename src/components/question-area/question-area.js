@@ -24,200 +24,604 @@ class QuestionArea extends Component {
             stepNumber: 0,
             result: [],
             resultList: {
-                male: {
-                    xs: {
-                        dress: {
-                            model: "Hello",
+                    male: {
+                        xs: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        undershirt: {
-                            model: "Hello",
+                        s: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        shorts: {
-                            model: "Hello",
+                        m: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        skirt: {
-                            model: "Hello",
+                        l: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        blouse: {
-                            model: "Hello",
+                        xl: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         }
                     },
-                    s: {
-                        dress: {
-                            model: "Hello",
+                    female: {
+                        xs: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        undershirt: {
-                            model: "Hello",
+                        s: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        shorts: {
-                            model: "Hello",
+                        m: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        skirt: {
-                            model: "Hello",
+                        l: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    m: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    l: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    xl: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
+                        xl: {
+                            dress: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            undershirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            shorts: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            skirt: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            },
+                            blouse: {
+                                "1": {
+                                    model: "Hello, 1"
+                                },
+                                "2": {
+                                    model: "Hello, 2"
+                                },
+                                "3": {
+                                    model: "Hello, 1"
+                                },
+                            }
                         }
                     }
                 },
-                female: {
-                    xs: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    s: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    m: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    l: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    },
-                    xl: {
-                        dress: {
-                            model: "Hello",
-                        },
-                        undershirt: {
-                            model: "Hello",
-                        },
-                        shorts: {
-                            model: "Hello",
-                        },
-                        skirt: {
-                            model: "Hello",
-                        },
-                        blouse: {
-                            model: "Hello",
-                        }
-                    }
-                }
-            },
-            
-        };
+
+            };
     }
     startQuiz = () => {
         this.setState(() => ({
             isStart: true,          
         }));      
     };
-    finishQuiz = () => {
-        if (this.state.curId) {
-            this.setState(() => ({
-                isStart: false,  
-                isFinish: true,
-            }));
-        }  
+    finishQuiz = (id) => {
+        let newResult = this.state.result.slice(0, this.state.stepNumber + 1);
+
+        newResult[this.state.stepNumber] = id;
+
+        this.setState(() => ({
+            resultWord: newResult.join(" "),
+            curId: id,
+            result: newResult,
+            isStart: false,  
+            isFinish: true,
+        }));
+         
     };
-    nextQuestion = () => {
-        console.log(this.state.curId);
-        
+    nextQuestion = () => {      
         if (!this.state.isFinish && this.state.curId) {
             const history = this.state.history.slice(0, this.state.stepNumber + 1);
         
@@ -255,8 +659,7 @@ class QuestionArea extends Component {
             </div>
         );
     };
-    selectAnswer = (id) => {
-        
+    selectAnswer = (id) => {   
         let newResult = this.state.result.slice(0, this.state.stepNumber + 1);
 
         newResult[this.state.stepNumber] = id;
@@ -266,12 +669,17 @@ class QuestionArea extends Component {
             curId: id,
             result: newResult,
         }));
-        console.log(newResult);
 
     };
     render() {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
+
+
+        let curId = this.state.result[2];
+
+
+        console.log(curId);
 
         return (
             <div className="questions__area">
@@ -282,7 +690,9 @@ class QuestionArea extends Component {
                         prevQuestion={this.prevQuestion} 
                         finishQuiz={this.finishQuiz} 
                         selectAnswer={this.selectAnswer} 
-                        stepNumber={this.stepNumber} />) :
+                        stepNumber={this.stepNumber}
+                        curId={curId}
+                         />) :
                         this.state.isFinish ? 
                         (<div className="modal">
                             {this.modalWindow(this.state.result)}

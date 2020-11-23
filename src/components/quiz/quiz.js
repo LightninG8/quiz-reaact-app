@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from 'styled-components';
 
 import "./quiz.scss";
 
@@ -17,15 +18,36 @@ class Quiz extends React.Component {
         prevQuestion: PropTypes.func,
         selectAnswer: PropTypes.func,
         stepNumber: PropTypes.number,
+        curId: PropTypes.string,
     };
     constructor(props) {
         super(props);
     }
     questionsList = () => {
+        let typeEnding;
+
+        switch (this.props.curId) {
+            case "dress":
+                typeEnding = "понравившееся платье";
+            break;
+            case "undershirt":
+                typeEnding = "понравившуюяся майку";
+            break;
+            case "shorts":
+                typeEnding = "понравившиеся шорты";
+            break;
+            case "skirt":
+                typeEnding = "понравившуюся юбку";
+            break;
+            case "blouse":
+                typeEnding = "понравившуюся кофту";
+            break;
+        }
         return [
             {
                 question: "Ваш пол",
-                className: "form-radio__label_large",
+                className: "form-radio__label form-radio__label_large",
+                type: "radio",
                 answers: [
                     {
                         id: "male",
@@ -41,7 +63,8 @@ class Quiz extends React.Component {
             },
             {
                 question: "Ваш размер",
-                className: "form-radio__label_radio",
+                className: "form-radio__label form-radio__label_radio",
+                type: "radio",
                 answers: [
                     {
                         id: "xs",
@@ -72,7 +95,8 @@ class Quiz extends React.Component {
             },
             {
                 question: "Тип одежды:",
-                className: "form-radio__label_medium",
+                className: "form-radio__label form-radio__label_medium",
+                type: "radio",
                 answers: [
                     {
                         id: "dress",
@@ -100,202 +124,59 @@ class Quiz extends React.Component {
                         image: null,
                     },
                 ]
+            },
+            {
+                question: `Выберите ${typeEnding}`,
+                className: "form-cards",
+                type: "cards",
+                answers: [
+                    {
+                        id: "1",
+                        value: "ПРИМЕРИТЬ 1",
+                        image: null,
+                    },
+                    {
+                        id: "2",
+                        value: "ПРИМЕРИТЬ 2",
+                        image: null,
+                    },
+                    {
+                        id: "3",
+                        value: "ПРИМЕРИТЬ 3",
+                        image: null,
+                    }
+                ]
             }
         ];
     };
-    answersList = () => {
-        return {
-            male: {
-                xs: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                s: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                m: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                l: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                xl: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                }
-            },
-            female: {
-                xs: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                s: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                m: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                l: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                },
-                xl: {
-                    dress: {
-                        model: "Hello",
-                    },
-                    undershirt: {
-                        model: "Hello",
-                    },
-                    shorts: {
-                        model: "Hello",
-                    },
-                    skirt: {
-                        model: "Hello",
-                    },
-                    blouse: {
-                        model: "Hello",
-                    }
-                }
-            }
-        };
-    };
+    
     renderQuestion = (index) => {
         const DATA = this.questionsList();
         const renderAnswers = (question) => {
             return question.answers.map((elem) => {
-                return (
-                    <div className="form-radio__item" key={elem.id}>
-                        <input className="form-radio__radio" name="item" type="radio" id={elem.id} value={elem.id} />
-                        <label 
-                            htmlFor={elem.id} 
-                            className={`form-radio__label ${question.className}`} 
-                            onClick={() => this.props.selectAnswer(elem.id)}>
+                if (question.type == "radio") {
+                    return (
+                        <div className="form-radio__item" key={elem.id}>
+                            <input className="form-radio__radio" name="item" type="radio" id={elem.id} value={elem.id} />
+                            <label 
+                                htmlFor={elem.id} 
+                                className={question.className} 
+                                onClick={() => this.props.selectAnswer(elem.id)}>
+                                    {elem.value}
+                            </label>
+                        </div>
+                    );
+                } else if (question.type === "cards") {
+                    return (<div key={elem.id}>
+                        <div 
+                            className={question.className} 
+                            id={elem.id}
+                            onClick={() => {this.props.finishQuiz(elem.id);}}>
                                 {elem.value}
-                        </label>
-                    </div>
-                );
+                        </div>
+                    </div>);
+                }
+                
             });
         };
 
@@ -314,13 +195,24 @@ class Quiz extends React.Component {
         );
     };
     renderInfo = (index, maxIndex) => {
+        const progressPercent = Math.round(index / maxIndex * 100);
+        const Statusbar = styled.div`
+            &:after {
+                width: ${progressPercent}%;
+            }
+            
+        `;
         return (
             <div className="quiz__info">
-                <div className="quiz__statusbar"></div>
+                <div className="quiz__statusbar statusbar">
+                <div className="statusbar__percent">Готово: {progressPercent}%</div>
+                    <Statusbar className="statusbar__bar" ></Statusbar>
+                </div>
                 <div className="quiz__controls">
                     {index + 1 === maxIndex ? 
                         (<div className="button_outline quiz__button quiz__button_last" id="quiz__prev" onClick={this.props.prevQuestion}>
-                            <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
+                            <img src={arrowPrevIcon} alt="" className="quiz__icon"/>&nbsp;
+                            Назад
                         </div>) :
                         index === 0 ? 
                         (<div className="button_outline quiz__button quiz__button_disabled" id="quiz__prev">
@@ -335,10 +227,7 @@ class Quiz extends React.Component {
                             Далее&nbsp;
                             <img src={arrowNextIcon} alt="" className="quiz__icon"/>
                         </div>) : 
-                        (<div className="button quiz__button" id="quiz__next" onClick={this.props.finishQuiz}>
-                            Далее&nbsp;
-                            <img src={arrowNextIcon} alt="" className="quiz__icon"/>
-                        </div>)
+                        ("")
                     }
                 </div>
             </div>

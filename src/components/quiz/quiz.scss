@@ -4,8 +4,6 @@
 
 	&__controls {
 		display: flex;
-
-		margin-top: 105px;
 	}
 
 	&__button {
@@ -21,6 +19,17 @@
 			opacity: 0.2;
 
 			cursor: default;
+		}
+		&_last {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 144px !important;
+
+			color: #F6BD1A;
+			.quiz__icon {
+				transform: translateY(40%);
+			}
 		}
 	}
 
@@ -44,6 +53,15 @@
 		width: 100%;
 	}
 	&__radio {
+		width: 100%;
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 105px;
+	}
+	&__statusbar {
 		width: 100%;
 	}
 }
@@ -99,6 +117,40 @@
 		}
 		&_medium {
 			padding: 0 19px;
+		}
+	}
+}
+.statusbar {
+	&__percent {
+		/* Готово: 25% */
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 110%;
+		/* or 15px */
+		color: #FFFFFF;
+	}
+	&__bar {
+		/* Rectangle 4 */
+		position: relative;
+	
+		max-width: 328px;
+		height: 4px;
+		margin-top: 10px;
+
+		background: #262626;
+		border-radius: 32px;
+
+		&:after {
+			content: "";
+
+			display: block;
+			width: 0%;
+			height: 100%;
+
+			background: #F6BD1A;
+			border-radius: 32px;
 		}
 	}
 }
