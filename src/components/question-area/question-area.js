@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import "./question-area.scss";
 
-import Question from "../question";
+import Quiz from "../quiz";
 
 // Изображения
 
@@ -12,6 +12,7 @@ class QuestionArea extends Component {
         super(props);
         this.state = {
             isStart: false,
+            isFinish: false
         };
     }
     startQuiz = () => {
@@ -20,18 +21,20 @@ class QuestionArea extends Component {
             questionCounter: 0,
         });      
     };
+    nextQuestion = () => {
+        const counter = this.state.questionCounter + 1;
+
+        this.setState({
+            questionCounter: counter,
+        });
+    };
     render() {
         return (
             <div className="questions__area">
                 {this.state.isStart ?
-                    (<div className="questions__question">
-                        <Question/>
-                    </div>) :
+                    (<Quiz number={this.state.questionCounter} nextQuestion={this.nextQuestion}/>) :
                     (<div className="questions__button" onClick={() => this.startQuiz()}></div>)
-                 }
-                
-
-                
+                 }      
             </div>
 
             
