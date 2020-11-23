@@ -11,307 +11,339 @@ import arrowPrevIcon from "../../img/quiz/arrow-prev.svg";
 
 class Quiz extends React.Component {
     static propTypes = {
-        number: PropTypes.number,
+        question: PropTypes.number,
+        finishQuiz: PropTypes.func,
         nextQuestion: PropTypes.func,
+        selectAnswer: PropTypes.func,
+        answersResult: PropTypes.object,
     };
     constructor(props) {
         super(props);
     }
-    getQuestion = (i) => {
-        let questionsList = [
+    questionsList = () => {
+        return [
             {
-                title: "Ваш пол:",
-                type: "gender",
-                values: [
+                question: "Ваш пол",
+                className: "form-radio__label_large",
+                answers: [
                     {
-                        output: "Мужчина",
-                        input: "male",
+                        id: "male",
+                        value: "Мужчина",
+                        image: null,
                     },
                     {
-                        output: "Женщина",
-                        input: "female",
-                    }
-                ],
-                className: "form-radio__label_large"
+                        id: "female",
+                        value: "Женщина",
+                        image: null,
+                    },
+                ]
             },
             {
-                title: "Ваш размер:",
-                type: "size",
-                values: [
+                question: "Ваш размер",
+                className: "form-radio__label_radio",
+                answers: [
                     {
-                        output: "XS",
-                        input: "xs",
+                        id: "xs",
+                        value: "XS",
+                        image: null,
                     },
                     {
-                        output: "S",
-                        input: "s",
+                        id: "s",
+                        value: "S",
+                        image: null,
                     },
                     {
-                        output: "M",
-                        input: "m",
+                        id: "m",
+                        value: "M",
+                        image: null,
                     },
                     {
-                        output: "L",
-                        input: "l",
+                        id: "l",
+                        value: "L",
+                        image: null,
                     },
                     {
-                        output: "XL",
-                        input: "xl",
+                        id: "xl",
+                        value: "XL",
+                        image: null,
                     },
-                ],
-                className: "form-radio__label_radio"
+                ]
             },
             {
-                title: "Тип одежды:",
-                type: "type",
-                values: [
+                question: "Тип одежды:",
+                className: "form-radio__label_medium",
+                answers: [
                     {
-                        output: "Платье",
-                        input: "dress",
+                        id: "dress",
+                        value: "Платье",
+                        image: null,
                     },
                     {
-                        output: "Майка",
-                        input: "undershirt",
+                        id: "undershirt",
+                        value: "Майка",
+                        image: null,
                     },
                     {
-                        output: "Шорты",
-                        input: "shorts",
+                        id: "shorts",
+                        value: "Шорты",
+                        image: null,
                     },
                     {
-                        output: "Юбка",
-                        input: "skirt",
+                        id: "skirt",
+                        value: "Юбка",
+                        image: null,
                     },
                     {
-                        output: "Кофта",
-                        input: "blouse",
+                        id: "blouse",
+                        value: "Кофта",
+                        image: null,
                     },
-                ],
-                className: "form-radio__label_medium"
-            },
+                ]
+            }
         ];
-        
-        return questionsList[i];
     };
-    getAnswer = () => {
+    answersList = () => {
         return {
             male: {
                 xs: {
                     dress: {
-                        model: 1
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 2
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 3
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 4
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 5
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 s: {
                     dress: {
-                        model: 6
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 7
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 8
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 9
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 10
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 m: {
                     dress: {
-                        model: 11
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 12
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 13
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 14
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 15
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 l: {
                     dress: {
-                        model: 16
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 17
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 18
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 19
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 20
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 xl: {
                     dress: {
-                        model: 21
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 22
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 23
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 24
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 52
-                    },
-                },
+                        model: "Hello",
+                    }
+                }
             },
             female: {
                 xs: {
                     dress: {
-                        model: 26
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 27
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 28
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 29
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 30
-                    },
+                        model: "Hello",
+                    }
                 },
                 s: {
                     dress: {
-                        model: 31
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 32
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 33
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 34
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 35
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 m: {
                     dress: {
-                        model: 36
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 37
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 38
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 39
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 40
-                    }, 
+                        model: "Hello",
+                    }
                 },
                 l: {
                     dress: {
-                        model: 41
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 42
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 43
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 44
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 45
-                    },
+                        model: "Hello",
+                    }
                 },
                 xl: {
                     dress: {
-                        model: 46
+                        model: "Hello",
                     },
                     undershirt: {
-                        model: 47
+                        model: "Hello",
                     },
                     shorts: {
-                        model: 48
+                        model: "Hello",
                     },
                     skirt: {
-                        model: 49
+                        model: "Hello",
                     },
                     blouse: {
-                        model: 50
-                    }, 
-                },
+                        model: "Hello",
+                    }
+                }
             }
         };
     };
-    render() {
-        const question = this.getQuestion(this.props.number);
-        let questionAnswers;
-
-        if (question != null) {
-            questionAnswers = question.values.map( (elem) => {
-                let {output, input} = elem;
-                let classNames = `form-radio__label ${question.className}`;
-    
+    renderQuestion = (index) => {
+        const DATA = this.questionsList();
+        const renderAnswers = (question) => {
+            return question.answers.map((elem) => {
                 return (
-                    <div className="form-radio__item" key={input}>
-                        <input className="form-radio__radio" name="item" type="radio" id={input} value={input} />
-                        <label htmlFor={input} className={classNames}>{output}</label>
+                    <div className="form-radio__item" key={elem.id}>
+                        <input className="form-radio__radio" name="item" type="radio" id={elem.id} value={elem.id} />
+                        <label 
+                            htmlFor={elem.id} 
+                            className={`form-radio__label ${question.className}`} 
+                            onClick={() => {this.props.selectAnswer(elem.id);}}>
+                                {elem.value}
+                        </label>
                     </div>
                 );
             });
-        } else {
-            alert("It's all");
-        }
-        
-        
+        };
+
+
+        let question = DATA[index];
+
         return (
-            <div className="quiz">
-                <div className="quiz__title">{question.title}</div>
-                <div className="quiz__question">
-                    <form className="quiz__radio form-radio">
-                        {questionAnswers}  
-                    </form>
-                    
-                </div>
-                <div className="quiz__info">
-                    <div className="quiz__statusbar"></div>
-                    <div className="quiz__controls">
-                        <div className="button_outline quiz__button" id="quiz__prev">
+            (<>
+                <div className="quiz__title">{question.question}</div>
+                    <div className="quiz__question">
+                        <form className="quiz__radio form-radio">   
+                            {renderAnswers(question)  }                                                  
+                        </form>
+                    </div>
+                </>)
+        );
+    };
+    renderInfo = (index, maxIndex) => {
+        return (
+            <div className="quiz__info">
+                <div className="quiz__statusbar"></div>
+                <div className="quiz__controls">
+                    {index + 1 === maxIndex ? 
+                        (<div className="button_outline quiz__button quiz__button_last" id="quiz__prev">
                             <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
-                        </div>
-                        <div className="button quiz__button" id="quiz__next" onClick={this.props.nextQuestion}>
+                        </div>) :
+                        (<div className="button_outline quiz__button" id="quiz__prev">
+                            <img src={arrowPrevIcon} alt="" className="quiz__icon"/>
+                        </div>)
+                    }
+                    {index + 1 !== maxIndex ? 
+                        (<div className="button quiz__button" id="quiz__next" onClick={this.props.nextQuestion}>
                             Далее&nbsp;
                             <img src={arrowNextIcon} alt="" className="quiz__icon"/>
-                        </div>
-                    </div>
+                        </div>) : 
+                        (<div className="button quiz__button" id="quiz__next" onClick={this.props.finishQuiz}>
+                            Далее&nbsp;
+                            <img src={arrowNextIcon} alt="" className="quiz__icon"/>
+                        </div>)
+                    }
                 </div>
+            </div>
+        );
+    };
+    render() {
+        return (
+            <div className="quiz">
+                {this.renderQuestion(this.props.question)}
+                {this.renderInfo(this.props.question, this.questionsList().length)}
             </div>
         );
     }
