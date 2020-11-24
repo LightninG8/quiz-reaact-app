@@ -26,17 +26,19 @@ class Quiz extends React.Component {
         };
     }
     renderQuestion = (i) => {
-        console.log(this.state.result);
-
         const renderAnswers = () => {
             const answers = questionsList[i].answers.map( elem => {
-                const {id, value} = elem;
+                const {id, value, image} = elem;
+
                 return (
                     <AnswerItem 
                         key={id} 
                         answerId={id} 
                         answerValue={value} 
                         onClickHandler={this.selectAnswer}
+                        onFinishQuiz={this.finishQuiz}
+                        type={questionsList[i].type}
+                        answerImage={image}
                         className={questionsList[i].className}></AnswerItem>
                 );
             });
@@ -84,9 +86,14 @@ class Quiz extends React.Component {
         };
         return (
             <>
-                <div className="quiz__title">{questionsList[i].question}</div>
+                <div className="quiz__title">
+                    {   
+                        questionsList[i].type === "cards" ?
+                        questionsList[i].question[this.state.result[this.state.result.length - 1]]:
+                        questionsList[i].question
+                    }</div>
                 <div className="quiz__question">
-                    <form className="quiz__radio form-radio">   
+                    <form className="quiz__radio form">   
                         { renderAnswers(questionsList[i]) }                                                  
                     </form>
                 </div>
@@ -97,9 +104,30 @@ class Quiz extends React.Component {
     startQuiz = () => {
         this.setState( () => ({
             isStart: true,
+            isFinish: false,
         }));
     };
+    finishQuiz = (id) => {
+        this.setState( () => ({
+            isStart: false,
+            isFinish: true,
+            curId: "",
+            questionNumber: 0,
+            result: [],
+        }));
 
+        this.modalWindow(id);
+    };
+    // modalWindow  = (id) => {
+    //     let modal;
+
+    //     for (let i = 0; i < this.state.result.length; i++) {
+    //         modal = i === 0 ? answersList[this.state.result[i]] : modal[this.state.result[i]];
+    //     }
+    //     modal = modal[id];
+
+    //     alert(`${modal.model} \n ${this.state.result.join(" ")}`);
+    // };
     nextQuestion = () => {
         if (this.state.curId) {
             this.setState( state => ({
@@ -113,7 +141,7 @@ class Quiz extends React.Component {
     prevQuestion = () => {
         let newResult = this.state.result.slice(0);
         newResult.pop();
-        
+
         this.setState( state => ({
             questionNumber: state.questionNumber - 1,
             curId: "",
@@ -125,12 +153,13 @@ class Quiz extends React.Component {
             curId: id,
         }));
     };
+
     render() {
         return (
             <div className="questions__area">
                 <div className="quiz">
                     {
-                        this.state.isStart ?
+                        this.state.isStart || !this.state.isFinish ?
                             (this.renderQuestion(this.state.questionNumber)) :
                             (<div className="questions__button" onClick={() => this.startQuiz()}></div>)
                     }

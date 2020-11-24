@@ -1,6 +1,6 @@
 const answersList = {
     male: {
-        xs: {
+        "1": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -57,7 +57,7 @@ const answersList = {
                 },
             }
         },
-        s: {
+        "2": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -114,7 +114,7 @@ const answersList = {
                 },
             }
         },
-        m: {
+        "3": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -171,123 +171,9 @@ const answersList = {
                 },
             }
         },
-        l: {
-            dress: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            undershirt: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            shorts: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            skirt: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            blouse: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            }
-        },
-        xl: {
-            dress: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            undershirt: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            shorts: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            skirt: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            },
-            blouse: {
-                "1": {
-                    model: "Hello, 1"
-                },
-                "2": {
-                    model: "Hello, 2"
-                },
-                "3": {
-                    model: "Hello, 1"
-                },
-            }
-        }
     },
     female: {
-        xs: {
+        "1": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -344,7 +230,7 @@ const answersList = {
                 },
             }
         },
-        s: {
+        "2": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -401,7 +287,7 @@ const answersList = {
                 },
             }
         },
-        m: {
+        "3": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -458,7 +344,9 @@ const answersList = {
                 },
             }
         },
-        l: {
+    },
+    kid: {
+        "1": {
             dress: {
                 "1": {
                     model: "Hello, 1"
@@ -515,7 +403,64 @@ const answersList = {
                 },
             }
         },
-        xl: {
+        "2": {
+            dress: {
+                "1": {
+                    model: "Hello, 1"
+                },
+                "2": {
+                    model: "Hello, 2"
+                },
+                "3": {
+                    model: "Hello, 1"
+                },
+            },
+            undershirt: {
+                "1": {
+                    model: "Hello, 1"
+                },
+                "2": {
+                    model: "Hello, 2"
+                },
+                "3": {
+                    model: "Hello, 1"
+                },
+            },
+            shorts: {
+                "1": {
+                    model: "Hello, 1"
+                },
+                "2": {
+                    model: "Hello, 2"
+                },
+                "3": {
+                    model: "Hello, 1"
+                },
+            },
+            skirt: {
+                "1": {
+                    model: "Hello, 1"
+                },
+                "2": {
+                    model: "Hello, 2"
+                },
+                "3": {
+                    model: "Hello, 1"
+                },
+            },
+            blouse: {
+                "1": {
+                    model: "Hello, 1"
+                },
+                "2": {
+                    model: "Hello, 2"
+                },
+                "3": {
+                    model: "Hello, 1"
+                },
+            }
+        },
+        "3": {
             dress: {
                 "1": {
                     model: "Hello, 1"
