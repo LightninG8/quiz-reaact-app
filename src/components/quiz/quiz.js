@@ -23,6 +23,7 @@ class Quiz extends React.Component {
             isFinish: false,
             curId: "",
             question: questionsList,
+            questionNumber: 0,
             result: [],
         };
     }
@@ -93,7 +94,7 @@ class Quiz extends React.Component {
                         { renderAnswers(this.state.question) }                                                  
                     </form>
                 </div>
-                { renderInfo(this.state.questionNumber, 5) }
+                { renderInfo(this.state.questionNumber, 4) }
                 </>
         );
     };
@@ -110,23 +111,15 @@ class Quiz extends React.Component {
             curId: "",
             questionNumber: 0,
             result: [],
+            question: questionsList,
         }));
 
         this.modalWindow(id);
     };
     modalWindow  = (id) => {
-        let modal;
-
-        for (let i = 0; i < this.state.result.length; i++) {
-            modal = i === 0 ? questionsList[this.state.result[i]] : modal[this.state.result[i]];
-        }
-        modal = modal[id];
-
-        alert(`${modal.model} \n ${this.state.result.join(" ")}`);
+        alert(`${this.state.question.answers[id - 1].model} \n ${this.state.result.join(" ")}`);
     };
     nextQuestion = () => {
-        console.log(this.state.curId);
-
         if (this.state.curId) {
             this.setState( state => ({
                 questionNumber: state.questionNumber + 1,
@@ -141,10 +134,31 @@ class Quiz extends React.Component {
         let newResult = this.state.result.slice(0);
         newResult.pop();
 
+        let newQuestion;
+
+        if (newResult.length == 0) {
+            newQuestion = questionsList;
+        } else {
+            newQuestion = questionsList.nextQuestion[newResult[0]];
+        }
+
+        console.log(newQuestion);
+        
+        // let prevQuestion;
+
+        for (let i = 0; i < this.state.result.length; i++) {
+            if (newResult.length == 0) {
+                newQuestion = questionsList;
+            } else {
+                newQuestion = questionsList.nextQuestion[newResult[i]];
+            }
+        }
+
         this.setState( state => ({
             questionNumber: state.questionNumber - 1,
             curId: "",
             result: newResult,
+            question: newQuestion,
         }));
     };
     selectAnswer = (id) => {

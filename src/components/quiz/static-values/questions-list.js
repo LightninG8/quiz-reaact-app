@@ -67,19 +67,19 @@ const questionsList = {
                                     id: "1",
                                     value: "ПРИМЕРИТЬ",
                                     image: dressImage,
-                                    model: "MODEL",
+                                    model: "MODEL 1 1",
                                 },
                                 {
                                     id: "2",
                                     value: "ПРИМЕРИТЬ",
                                     image: dressImage,
-                                    model: "MODEL",
+                                    model: "MODEL 1 2",
                                 },
                                 {
                                     id: "3",
                                     value: "ПРИМЕРИТЬ",
                                     image: dressImage,
-                                    model: "MODEL",
+                                    model: "MODEL 1 3",
                                 }
                             ]
                         },
