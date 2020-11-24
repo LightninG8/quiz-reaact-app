@@ -7,6 +7,7 @@ import "./quiz.scss";
 // Компоненты
 // import answersList from "./static-values/answers-list";
 import questionsList from "./static-values/questions-list";
+
 import AnswerItem from "../answer-item";
 
 // Изображения
@@ -21,13 +22,13 @@ class Quiz extends React.Component {
             isStart: false,
             isFinish: false,
             curId: "",
-            questionNumber: 0,
+            question: questionsList,
             result: [],
         };
     }
-    renderQuestion = (i) => {
+    renderQuestion = (question) => {
         const renderAnswers = () => {
-            const answers = questionsList[i].answers.map( elem => {
+            const answers = question.answers.map( elem => {
                 const {id, value, image} = elem;
 
                 return (
@@ -37,9 +38,9 @@ class Quiz extends React.Component {
                         answerValue={value} 
                         onClickHandler={this.selectAnswer}
                         onFinishQuiz={this.finishQuiz}
-                        type={questionsList[i].type}
+                        type={question.type}
                         answerImage={image}
-                        className={questionsList[i].className}></AnswerItem>
+                        className={question.className}></AnswerItem>
                 );
             });
 
@@ -86,18 +87,13 @@ class Quiz extends React.Component {
         };
         return (
             <>
-                <div className="quiz__title">
-                    {   
-                        questionsList[i].type === "cards" ?
-                        questionsList[i].question[this.state.result[this.state.result.length - 1]]:
-                        questionsList[i].question
-                    }</div>
+                <div className="quiz__title">{this.state.question.question}</div>
                 <div className="quiz__question">
                     <form className="quiz__radio form">   
-                        { renderAnswers(questionsList[i]) }                                                  
+                        { renderAnswers(this.state.question) }                                                  
                     </form>
                 </div>
-                { renderInfo(this.state.questionNumber, questionsList.length) }
+                { renderInfo(this.state.questionNumber, 5) }
                 </>
         );
     };
@@ -118,22 +114,25 @@ class Quiz extends React.Component {
 
         this.modalWindow(id);
     };
-    // modalWindow  = (id) => {
-    //     let modal;
+    modalWindow  = (id) => {
+        let modal;
 
-    //     for (let i = 0; i < this.state.result.length; i++) {
-    //         modal = i === 0 ? answersList[this.state.result[i]] : modal[this.state.result[i]];
-    //     }
-    //     modal = modal[id];
+        for (let i = 0; i < this.state.result.length; i++) {
+            modal = i === 0 ? questionsList[this.state.result[i]] : modal[this.state.result[i]];
+        }
+        modal = modal[id];
 
-    //     alert(`${modal.model} \n ${this.state.result.join(" ")}`);
-    // };
+        alert(`${modal.model} \n ${this.state.result.join(" ")}`);
+    };
     nextQuestion = () => {
+        console.log(this.state.curId);
+
         if (this.state.curId) {
             this.setState( state => ({
                 questionNumber: state.questionNumber + 1,
                 curId: "",
                 result: state.result.concat([state.curId]),
+                question: state.question.nextQuestion[state.curId],
             }));
         }
         
@@ -160,7 +159,7 @@ class Quiz extends React.Component {
                 <div className="quiz">
                     {
                         this.state.isStart || !this.state.isFinish ?
-                            (this.renderQuestion(this.state.questionNumber)) :
+                            (this.renderQuestion(this.state.question)) :
                             (<div className="questions__button" onClick={() => this.startQuiz()}></div>)
                     }
                     
