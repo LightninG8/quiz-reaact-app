@@ -24,8 +24,11 @@ class AnswerItem extends React.Component {
         if (type === "radio") {
             return (
                 <div className="form__elem">
-                    <input className="form__radio" name="item" type="radio" id={answerId} value={answerId} />
-                    <label htmlFor={answerId} className={`form__label ${className}`} onClick={() => onClickHandler(answerId)}>{answerValue}</label>
+                    <label htmlFor={answerId}  className="form__label" onClick={() => onClickHandler(answerId)}>
+                        <img src={answerImage} className="form__image" alt=""/>
+                        <input className="form__radio" name="item" type="radio" id={answerId} value={answerId} />
+                        <div className={`form__input ${className}`}>{answerValue}</div>
+                    </label>
                 </div>  
             );  
         } else if (type === "cards") {

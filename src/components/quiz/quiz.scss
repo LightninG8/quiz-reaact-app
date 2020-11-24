@@ -12,10 +12,28 @@
 
 	user-select: none;
 
+	#model-viewer {
+		width: 900px;
+		height: 450px;
+	}
+
 	&__controls {
 		display: flex;
 	}
+	&__modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1000;
 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background: rgba(0, 0, 0, 0.3);	
+	}
 	&__button {
 		line-height: 47px;
 		font-weight: 500;
@@ -98,15 +116,32 @@
 }
 
 .form {
+	&__image {
+		max-height: 386px;
+	}
 	&__radio {
 		display: none;
 
-		&:checked+.form__label {
+		&:checked + .form__input {
 			border: 2px solid #C7EE86;
 		}
 	}
 
 	&__label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+
+		cursor: pointer;
+
+		&:hover .form__input {
+			border: 2px solid #C7EE86;
+			box-shadow: 0px 0px 30px rgba(199, 238, 134, 0.5), inset 0px 0px 15px rgba(199, 238, 134, 0.35) !important;
+		}
+	}
+	&__input {
 		font-family: Montserrat;
 		font-style: normal;
 		font-weight: 500;
@@ -119,6 +154,7 @@
 		align-items: center;
 		justify-content: center;
 		height: 62px;
+		margin-top: 15px;
 
 		box-sizing: border-box;
 		border-radius: 41px;
@@ -239,6 +275,54 @@
 
 			background: #F6BD1A;
 			border-radius: 32px;
+		}
+	}
+}
+.modal {
+	&__body{
+		position: relative;
+		padding: 25px 45px 60px 45px;
+		z-index: 10001;
+		background: #262626;
+
+		border-radius: 25px;
+
+		box-shadow: 0px 0px 50px #262626, inset 0px 0px 50px #262626;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&__title {
+		font-weight: 500;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__close {
+		position: absolute;
+
+		right: 25px;
+		top: 30px;
+
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		& span {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #ffffff;
+			
+			&:first-child {
+				transform: rotate(45deg);
+			}
+			&:last-child {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 }

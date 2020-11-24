@@ -21,6 +21,7 @@ class Quiz extends React.Component {
         this.state = {
             isStart: false,
             isFinish: false,
+            isModalClose: true,
             curId: "",
             question: questionsList,
             questionNumber: 0,
@@ -105,19 +106,40 @@ class Quiz extends React.Component {
         }));
     };
     finishQuiz = (id) => {
-        this.setState( () => ({
+        this.setState( (state) => ({
             isStart: false,
             isFinish: true,
+            isModalClose: false,
             curId: "",
             questionNumber: 0,
             result: [],
-            question: questionsList,
+            resultQuestion: state.question,
+            question: questionsList,        
+            lastId: id
         }));
-
-        this.modalWindow(id);
     };
-    modalWindow  = (id) => {
-        alert(`${this.state.question.answers[id - 1].model} \n ${this.state.result.join(" ")}`);
+    renderModalWindow  = () => {
+        return (   
+            <div className="quiz__modal modal">
+                <div className="quiz__result modal__body">
+                    <h2 className="modal__title">Результат</h2>
+                    <div className="quiz__result_model">
+                        <model-viewer id="model-viewer" src={this.state.resultQuestion.answers[this.state.lastId - 1].model} alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div className="modal__close" onClick={this.closeModal}>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div> 
+                <div className="modal__bg" onClick={this.closeModal}></div>
+            </div>
+            
+        );
+    };
+    closeModal = () => {
+        this.setState( () => ({
+            isModalClose: true,
+        }));
     };
     nextQuestion = () => {
         if (this.state.curId) {
@@ -134,24 +156,10 @@ class Quiz extends React.Component {
         let newResult = this.state.result.slice(0);
         newResult.pop();
 
-        let newQuestion;
+        let newQuestion = questionsList;
 
-        if (newResult.length == 0) {
-            newQuestion = questionsList;
-        } else {
-            newQuestion = questionsList.nextQuestion[newResult[0]];
-        }
-
-        console.log(newQuestion);
-        
-        // let prevQuestion;
-
-        for (let i = 0; i < this.state.result.length; i++) {
-            if (newResult.length == 0) {
-                newQuestion = questionsList;
-            } else {
-                newQuestion = questionsList.nextQuestion[newResult[i]];
-            }
+        for (let i = 0; i < this.state.result.length - 1; i++) {            
+            newQuestion = newQuestion.nextQuestion[newResult[i]];
         }
 
         this.setState( state => ({
@@ -175,6 +183,11 @@ class Quiz extends React.Component {
                         this.state.isStart || !this.state.isFinish ?
                             (this.renderQuestion(this.state.question)) :
                             (<div className="questions__button" onClick={() => this.startQuiz()}></div>)
+                    }
+                    {
+                        this.state.isFinish && !this.state.isModalClose? 
+                            this.renderModalWindow():
+                            ""
                     }
                     
                 </div>
