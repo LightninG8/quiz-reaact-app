@@ -139,6 +139,7 @@ class Quiz extends React.Component {
     closeModal = () => {
         this.setState( () => ({
             isModalClose: true,
+            isFinish: false,
         }));
     };
     nextQuestion = () => {
@@ -180,12 +181,12 @@ class Quiz extends React.Component {
             <div className="questions__area">
                 <div className="quiz">
                     {
-                        this.state.isStart || !this.state.isFinish ?
+                        this.state.isStart || this.state.isFinish ?
                             (this.renderQuestion(this.state.question)) :
                             (<div className="questions__button" onClick={() => this.startQuiz()}></div>)
                     }
                     {
-                        this.state.isFinish && !this.state.isModalClose? 
+                        !this.state.isModalClose? 
                             this.renderModalWindow():
                             ""
                     }
