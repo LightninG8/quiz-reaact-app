@@ -9,13 +9,13 @@ function AppHeader() {
     return (
         <header className="header">
             <div className="container header__body">
-                <div className="header__logo logo" onClick={() => {alert("Click");}}>
+                <div className="header__logo logo">
                     <div className="logo__button">
                         <span className="logo__button-line"></span>
                         <span className="logo__button-line"></span>
                         <span className="logo__button-line"></span>
                     </div>
-                    <div className="logo__name">LOGO</div>
+                    <div className="logo__name">ARWEAR</div>
                 </div>
                 <div className="header__callback callback">
                     <div className="callback__icon">

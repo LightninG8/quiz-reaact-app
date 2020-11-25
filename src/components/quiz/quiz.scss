@@ -1,6 +1,6 @@
 .quiz {
 	color: #ffffff;
-
+	user-select: none;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -13,8 +13,8 @@
 	user-select: none;
 
 	#model-viewer {
-		width: 900px;
-		height: 450px;
+		width: 600px;
+		height: 400px;
 	}
 
 	&__controls {
@@ -104,7 +104,112 @@
 	&__statusbar {
 		width: 100%;
 	}
-}
+
+
+	@media screen and (max-width: 768px) {
+		margin-top: 50px;
+
+		&__title {
+			font-size: 1.8rem;
+		}
+		&__radio {
+			margin-top: 30px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.form__elem {
+			max-width: 40%;
+			
+		}
+		.form__label {		
+			line-height: 35px;
+			font-size: 1.6rem;
+			
+			.form__image {
+				max-width: 75px;
+			}
+
+			&[for="2m"] .form__image {
+				max-width: 110px;
+			}
+			&[for="3m"] .form__image {
+				max-width: 80px;
+			}
+		}
+		.form__input_large {
+			height: 35px;
+			padding: 10px;
+		}
+		.form__input_medium{
+			height: 35px;
+			padding: 10px;
+		}
+		.form__input_radio {
+			height: 40px;
+			width: 40px;
+		}
+		.form__item {
+			width: 100%;
+			max-width: 150px;
+			height: 200px;
+
+			&_button {
+				width: 114px;
+				height: 33px;
+				line-height: 30px;
+
+				font-size: 1.2rem;
+			}
+			&_image{
+				top: -25%;
+
+				& img {
+					width: 73px;
+				}
+			}
+		}
+		&__button {
+			height: 30px;
+			font-size: 1.4rem;
+
+			&_last {
+				width: 92px !important;
+			}
+		}
+		&__controls {
+			margin-left: 20px;
+		}
+		&__icon {
+			width: 20px;
+		}
+		#quiz__next {
+			line-height: 30px;
+			width: 92px;
+			margin-left: 20px;
+		}
+		
+		#quiz__prev {
+			line-height: 26px;
+			width: 30px;
+		}
+		.statusbar__percent {
+			font-size: 1.2rem;
+		}
+		.modal {
+			&__body {
+				width: 100%;
+				height: 100%;
+				border-radius: 0;
+				padding: 10px;
+			}
+			&__button {
+				transform: scale(0.8);
+			}
+			#model-viewer {
+				width: 100%;
+			}
+		}
+    }}
 
 #quiz__next {
 	width: 144px;
@@ -136,7 +241,10 @@
 
 		cursor: pointer;
 
+		outline: none;
+
 		&:hover .form__input {
+			transition: 0.1s;
 			border: 2px solid #C7EE86;
 			box-shadow: 0px 0px 30px rgba(199, 238, 134, 0.5), inset 0px 0px 15px rgba(199, 238, 134, 0.35) !important;
 		}
@@ -159,7 +267,7 @@
 		box-sizing: border-box;
 		border-radius: 41px;
 		border: 2px solid rgba(0, 0, 0, 0);
-
+		transition: 0.1s;
 		color: #FFFFFF;
 
 		cursor: pointer;
@@ -300,6 +408,27 @@
 		font-weight: 500;
 		text-align: center;
 		margin-bottom: 20px;
+	}
+
+	&__button {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 1rem;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 40px;
+		padding: 0 15px;
+		border: none;
+		border-bottom: 3px solid #483707;
+		box-shadow: none;
+		outline: none;
+
+		&:hover {
+			box-shadow: none;
+			background: #e6ad13;
+			border-bottom: 3px solid #443306;
+		}
 	}
 	&__close {
 		position: absolute;

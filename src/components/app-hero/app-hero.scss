@@ -11,13 +11,18 @@
         margin-top: 190px;
         max-width: 434px;
     }
-
+    &__circles {
+    
+        &_image {
+            display: none;
+        }
+    }
     &__title {
         /* ПРИМЕРКА ОДЕЖДЫ В AR */
         font-family: "Open Sans";
         font-style: normal;
         font-weight: bold;
-        font-size: 6.4rem;
+        font-size: 6.3rem;
         line-height: 110%;
         /* or 70px */
 
@@ -111,6 +116,236 @@
         position: relative;
         padding-top: 120px;
     }
+
+
+    @media screen and (max-width: 1200px) {
+        &__title {
+            font-size: 4.8rem;
+        }
+        &__subtitle {
+            font-size: 1.6rem;
+            max-width: 350px;
+        }
+        &__button {
+            font-size: 1.6rem;
+            line-height: 80px;
+
+            width: 256px;
+            height: 80px;
+
+            &:before {
+                line-height: 80px;
+
+                width: 256px;
+                height: 80px;
+            }
+        }
+        &__description {
+            margin-left: 35px;
+        }
+        .advantages {
+            transform: translateX(10%);
+
+            &__circles {
+                transform: translate(22%, -8%);
+            }
+            &__advantages {
+                left: -79%;
+            }
+            &__advantage {
+                position: absolute;
+
+                &_title {
+                    font-size: 1.4rem;
+                }
+                &_subtitle {
+                    font-size: 1.2rem;
+                }
+
+                &:nth-child(1) {
+                    max-width: 274px;
+                }
+                &:nth-child(2) {
+                    top: 210px;
+                }
+                &:nth-child(3) {
+                    top: 445px;
+                }
+                &:nth-child(4) {
+                    top: 653px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        &__leaf {
+            display: none;
+        }
+        &__title {
+            font-size: 4.6rem;
+        }
+        &__subtitle {
+            font-size: 1.5rem;
+            max-width: 350px;
+        }
+        &__button {
+            font-size: 1.4rem;
+            line-height: 67px;
+
+            width: 213px;
+            height: 67px;
+
+            &:before {
+                line-height: 67px;
+
+                width: 213px;
+                height: 67px;
+            }
+        }
+        &__description {
+            margin-left: 0px;
+        }
+        .advantages {
+            transform: translateX(14%);
+
+            &__circles {
+                transform: translate(22%, -8%);
+            }
+            &__advantages {
+                left: -80%;
+            }
+            &__advantage {
+                position: absolute;
+
+                &_title {
+                    font-size: 1.4rem;
+                }
+                &_subtitle {
+                    font-size: 1.2rem;
+                }
+
+                &:nth-child(1) {
+                    right: -70px;
+                    max-width: 230px;
+                }
+                &:nth-child(2) {
+                    top: 160px;
+                }
+                &:nth-child(3) {
+                    top: 335px;
+                }
+                &:nth-child(4) {
+                    top: 495px;
+                    right: -70px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__body {
+            display: flex;
+            flex-direction: column;
+        }
+        &__description {
+            margin-top: 0;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            font-size: 2.4rem;
+        }
+        &__subtitle {
+            max-width: 322px;
+            font-size: 1.4rem;
+            margin-top: 15px;
+        }
+        &__button {
+            margin-top: 30px;
+        }
+        &__advantages {
+            transform: translateX(0%) !important;
+            width: 100%;
+            padding: 0;
+            margin-top: 50px;
+        }
+        &__circles {
+            width: 100%;
+
+            &_image {
+                width: 100%;
+                display: block;
+            }
+        }
+        .advantages {
+
+            &__circles {
+                display: none;
+            }
+            &__advantages {
+                position: static;
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            &__advantage {
+                position: relative;
+
+                top: 0 !important;
+                right: 0 !important;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 35%;
+                max-width: none !important;
+                margin-top: 20px;
+                
+                &:before {
+                    content: "";
+                    width: 25px;
+                    height: 25px;
+                    margin-bottom: 10px;
+
+                    border: 2px solid #F6BD1A;
+
+                    border-radius: 50%;
+                    
+                }
+                &:after {
+                    content: "";
+
+                    position: absolute;
+                    top: 6px;
+
+                    width: 13px;
+                    height: 13px;
+                    margin-bottom: 10px;
+
+                    background:  #F6BD1A;
+                    border-radius: 50%;
+                    
+                }
+                &_title {
+                    text-align: center;
+
+                    max-width: 124px;
+                }
+                &_subtitle {
+                    text-align: center;
+
+                    max-width: 124px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px) {
+
+    }
 }
 
 .advantages {
@@ -120,22 +355,13 @@
     }
 
     &__circles {
-        position: absolute;
-        max-width: 844px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-52%, -51%);
-    }
+        max-width: 100%;
 
-    &__img {
-        position: relative;
-        display: block;
-        z-index: 50;
+        transform: translate(28%, -8%);
     }
-
     &__advantages {
         position: absolute;
-        left: -455px;
+        left: -73%;
 
         width: 100%;        
 
@@ -148,6 +374,7 @@
         
         z-index: 100;
 
+        
         &:nth-child(1) {
             right: -96px;
 

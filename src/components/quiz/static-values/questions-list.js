@@ -26,7 +26,7 @@ import kidHeavyModel from "../../../models/ChildHeavy.glb";
 // следующему "nextQuestion" и так до конца.
 
 const questionsList = {
-    question: "Ваш пол",
+    question: "Выберите один вариант ответа:",
     className: "form__label form__input_large",
     type: "radio",
     answers: [{
@@ -197,7 +197,7 @@ const questionsList = {
             }
         },
         female: {
-            question: "Выберите тип манекена",
+            question: "Выберите тип манекена:",
             className: "form__label form__input_radio",
             type: "radio",
             answers: [{
