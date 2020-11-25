@@ -21,6 +21,20 @@ import kidNormalModel from "../../../models/ChildThin.glb";
 import kidBodyModel from "../../../models/ChildNormal.glb";
 import kidHeavyModel from "../../../models/ChildHeavy.glb";
 
+
+import womanNormalShortModel from "../../../models/WomenThinShort.glb";
+import womanNormalSkirtModel from "../../../models/WomenThinSkirt.glb";
+import womanNormalShtaniModel from "../../../models/WomenThinShtani.glb";
+
+import womanBodyShortModel from "../../../models/WomenNormalShort.glb";
+import womanBodySkirtModel from "../../../models/WomenNormalSkirt.glb";
+import womanBodyShtaniModel from "../../../models/WomenNormalShtani.glb";
+
+import womanHeavyShortModel from "../../../models/WomenHeavyShort.glb";
+import womanHeavySkirtModel from "../../../models/WomenHeavySkirt.glb";
+import womanHeavyShtaniModel from "../../../models/WomenHeavyShtani.glb";
+
+
 // Список вопросов представляет из себя все возможные варианты (дерево)
 // по результатам выбранного ответа (сравнивается по id) осуществляется переход к
 // следующему "nextQuestion" и так до конца.
@@ -242,8 +256,8 @@ const questionsList = {
                             image: null,
                         },
                         {
-                            id: "blouse",
-                            value: "Кофта",
+                            id: "pants",
+                            value: "Штаны",
                             image: null,
                         },
                     ],
@@ -280,7 +294,7 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanNormalModel,
+                                model: womanNormalShortModel,
                             },
                         ]
                         },
@@ -292,19 +306,19 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanNormalModel,
+                                model: womanNormalSkirtModel,
                             },
                         ]
                         },
-                        blouse: {
-                            question: "Выберите понравившуюяся кофту",
+                        pants: {
+                            question: "Выберите понравившеся штаны",
                             className: "form-cards",
                             type: "cards",
                             answers: [{
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanNormalModel,
+                                model: womanNormalShtaniModel,
                                 },
                             ]
                         },
@@ -335,8 +349,8 @@ const questionsList = {
                             image: null,
                         },
                         {
-                            id: "blouse",
-                            value: "Кофта",
+                            id: "pants",
+                            value: "Штаны",
                             image: null,
                         },
                     ],
@@ -373,7 +387,7 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanBodyModel,
+                                model: womanBodyShortModel,
                                 },
                             ]
                         },
@@ -385,19 +399,19 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanBodyModel,
+                                model: womanBodySkirtModel,
                                 },
                             ]
                         },
-                        blouse: {
-                            question: "Выберите понравившуюяся кофту",
+                        pants: {
+                            question: "Выберите понравившееся штаны",
                             className: "form-cards",
                             type: "cards",
                             answers: [{
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanBodyModel,
+                                model: womanBodyShtaniModel,
                                 },
                             ]
                         },
@@ -428,8 +442,8 @@ const questionsList = {
                             image: null,
                         },
                         {
-                            id: "blouse",
-                            value: "Кофта",
+                            id: "pants",
+                            value: "Штаны",
                             image: null,
                         },
                     ],
@@ -466,7 +480,7 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanHeavyModel,
+                                model: womanHeavyShortModel,
                                 },
                             ]
                         },
@@ -478,19 +492,19 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanHeavyModel,
+                                model: womanHeavySkirtModel,
                                 },
                             ]
                         },
-                        blouse: {
-                            question: "Выберите понравившуюяся кофту",
+                        pants: {
+                            question: "Выберите понравившееся штаны",
                             className: "form-cards",
                             type: "cards",
                             answers: [{
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: dressImage,
-                                model: womanHeavyModel,
+                                model: womanHeavyShtaniModel,
                                 },
                             ]
                         },

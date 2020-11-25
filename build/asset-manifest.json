@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.5faae54d.chunk.css",
-    "main.js": "./static/js/main.037c3184.chunk.js",
-    "main.js.map": "./static/js/main.037c3184.chunk.js.map",
+    "main.css": "./static/css/main.a44c9de0.chunk.css",
+    "main.js": "./static/js/main.68c30672.chunk.js",
+    "main.js.map": "./static/js/main.68c30672.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.03082609.js",
     "runtime-main.js.map": "./static/js/runtime-main.03082609.js.map",
     "static/js/2.4bd0096d.chunk.js": "./static/js/2.4bd0096d.chunk.js",
     "static/js/2.4bd0096d.chunk.js.map": "./static/js/2.4bd0096d.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.5faae54d.chunk.css.map": "./static/css/main.5faae54d.chunk.css.map",
+    "index.html": "/index.html",
+    "static/css/main.a44c9de0.chunk.css.map": "./static/css/main.a44c9de0.chunk.css.map",
     "static/js/2.4bd0096d.chunk.js.LICENSE.txt": "./static/js/2.4bd0096d.chunk.js.LICENSE.txt",
     "static/media/ChildHeavy.6249f7ce.glb": "./static/media/ChildHeavy.6249f7ce.glb",
     "static/media/ChildNormal.b99cee19.glb": "./static/media/ChildNormal.b99cee19.glb",
@@ -17,8 +17,17 @@
     "static/media/MenHeavy.33f362b3.glb": "./static/media/MenHeavy.33f362b3.glb",
     "static/media/MenNormal.7ac5f1c3.glb": "./static/media/MenNormal.7ac5f1c3.glb",
     "static/media/WomenHeavy.6258a744.glb": "./static/media/WomenHeavy.6258a744.glb",
+    "static/media/WomenHeavyShort.b172a7ac.glb": "./static/media/WomenHeavyShort.b172a7ac.glb",
+    "static/media/WomenHeavyShtani.3ab9d7fb.glb": "./static/media/WomenHeavyShtani.3ab9d7fb.glb",
+    "static/media/WomenHeavySkirt.e17d0a45.glb": "./static/media/WomenHeavySkirt.e17d0a45.glb",
     "static/media/WomenNormal.9a8754cf.glb": "./static/media/WomenNormal.9a8754cf.glb",
+    "static/media/WomenNormalShort.0d897fa9.glb": "./static/media/WomenNormalShort.0d897fa9.glb",
+    "static/media/WomenNormalShtani.4a4801b1.glb": "./static/media/WomenNormalShtani.4a4801b1.glb",
+    "static/media/WomenNormalSkirt.343df652.glb": "./static/media/WomenNormalSkirt.343df652.glb",
     "static/media/WomenThin.d05c3a4c.glb": "./static/media/WomenThin.d05c3a4c.glb",
+    "static/media/WomenThinShort.af379023.glb": "./static/media/WomenThinShort.af379023.glb",
+    "static/media/WomenThinShtani.e71d5629.glb": "./static/media/WomenThinShtani.e71d5629.glb",
+    "static/media/WomenThinSkirt.80aeb4f0.glb": "./static/media/WomenThinSkirt.80aeb4f0.glb",
     "static/media/arrow-next.2eeb24f1.svg": "./static/media/arrow-next.2eeb24f1.svg",
     "static/media/arrow-prev.c986b027.svg": "./static/media/arrow-prev.c986b027.svg",
     "static/media/arrow.11ce7f89.svg": "./static/media/arrow.11ce7f89.svg",
@@ -42,7 +51,7 @@
   "entrypoints": [
     "./static/js/runtime-main.03082609.js",
     "./static/js/2.4bd0096d.chunk.js",
-    "./static/css/main.5faae54d.chunk.css",
-    "./static/js/main.037c3184.chunk.js"
+    "./static/css/main.a44c9de0.chunk.css",
+    "./static/js/main.68c30672.chunk.js"
   ]
 }
