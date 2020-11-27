@@ -29,7 +29,8 @@ import kidBodyImage from "../../../img/quiz/child-normal.png";
 import kidHeavyImage from "../../../img/quiz/child-heavy.png";
 
 // Модели
-// - Женщина
+// - .glb
+// -- Женщина
 import womanNormalShortsModel from "../../../models/female/shorts/WomenThinShort.glb";
 import womanBodyShortsModel from "../../../models/female/shorts/WomenNormalShort.glb";
 import womanHeavyShortsModel from "../../../models/female/shorts/WomenHeavyShort.glb";
@@ -50,7 +51,7 @@ import womanNormalPantsModel from "../../../models/female/pants/WomenThinShtani.
 import womanBodyPantsModel from "../../../models/female/pants/WomenNormalShtani.glb";
 import womanHeavyPantsModel from "../../../models/female/pants/WomenHeavyShtani.glb";
 
-// - Мужчина
+// -- Мужчина
 import manNormalUndershirtModel from "../../../models/male/undershirt/ManNormalTShirt.glb";
 import manBodyUndershirtModel from "../../../models/male/undershirt/ManBodyTShirt.glb";
 import manHeavyUndershirtModel from "../../../models/male/undershirt/ManHeavyTShirt.glb";
@@ -59,7 +60,7 @@ import manNormalPantsModel from "../../../models/male/pants/ManNormalShtani.glb"
 import manBodyPantsModel from "../../../models/male/pants/ManBodyShtani.glb";
 import manHeavyPantsModel from "../../../models/male/pants/ManHeavyShtani.glb";
 
-// -Ребёнок
+// -- Ребёнок
 import kidNormalPantsModel from "../../../models/kid/pants/ChildThinShtani.glb";
 import kidBodyPantsModel from "../../../models/kid/pants/ChildNormalShtani.glb";
 import kidHeavyPantsModel from "../../../models/kid/pants/ChildHeavyShtani.glb";
@@ -71,6 +72,51 @@ import kidHeavyShortsModel from "../../../models/kid/shorts/ChildHeavyShort.glb"
 import kidNormalUndershirtModel from "../../../models/kid/undershirt/ChildThinTShirt.glb";
 import kidBodyUndershirtModel from "../../../models/kid/undershirt/ChildNormalTShirt.glb";
 import kidHeavyUndershirtModel from "../../../models/kid/undershirt/ChildHeavyTShirt.glb";
+
+// - .usdz
+// - .glb
+// -- Женщина
+import womanNormalShortsModelUSDZ from "../../../models/female/shorts/WomenThinShort.usdz";
+import womanBodyShortsModelUSDZ from "../../../models/female/shorts/WomenNormalShort.usdz";
+import womanHeavyShortsModelUSDZ from "../../../models/female/shorts/WomenHeavyShort.usdz";
+
+import womanNormalSkirtModelUSDZ from "../../../models/female/skirt/WomenThinSkirt.usdz";
+import womanBodySkirtModelUSDZ from "../../../models/female/skirt/WomenNormalSkirt.usdz";
+import womanHeavySkirtModelUSDZ from "../../../models/female/skirt/WomenHeavySkirt.usdz";
+
+import womanNormalDressModelUSDZ from "../../../models/female/dress/WomenThinDress.usdz";
+import womanBodyDressModelUSDZ from "../../../models/female/dress/WomenNormalDress.usdz";
+import womanHeavyDressModelUSDZ from "../../../models/female/dress/WomenHeavyDress.usdz";
+
+import womanNormalUndershirtModelUSDZ from "../../../models/female/undershirt/WomenThinTshirt.usdz";
+import womanBodyUndershirtModelUSDZ from "../../../models/female/undershirt/WomenNormalTshirt.usdz";
+import womanHeavyUndershirtModelUSDZ from "../../../models/female/undershirt/WomenHeavyTshirt.usdz";
+
+import womanNormalPantsModelUSDZ from "../../../models/female/pants/WomenThinShtani.usdz";
+import womanBodyPantsModelUSDZ from "../../../models/female/pants/WomenNormalShtani.usdz";
+import womanHeavyPantsModelUSDZ from "../../../models/female/pants/WomenHeavyShtani.usdz";
+
+// -- Мужчина
+import manNormalUndershirtModelUSDZ from "../../../models/male/undershirt/ManNormalTShirt.usdz";
+import manBodyUndershirtModelUSDZ from "../../../models/male/undershirt/ManBodyTShirt.usdz";
+import manHeavyUndershirtModelUSDZ from "../../../models/male/undershirt/ManHeavyTShirt.usdz";
+
+import manNormalPantsModelUSDZ from "../../../models/male/pants/ManNormalShtani.usdz";
+import manBodyPantsModelUSDZ from "../../../models/male/pants/ManBodyShtani.usdz";
+import manHeavyPantsModelUSDZ from "../../../models/male/pants/ManHeavyShtani.usdz";
+
+// -- Ребёнок
+import kidNormalPantsModelUSDZ from "../../../models/kid/pants/ChildThinShtani.usdz";
+import kidBodyPantsModelUSDZ from "../../../models/kid/pants/ChildNormalShtani.usdz";
+import kidHeavyPantsModelUSDZ from "../../../models/kid/pants/ChildHeavyShtani.usdz";
+
+import kidNormalShortsModelUSDZ from "../../../models/kid/shorts/ChildThinShort.usdz";
+import kidBodyShortsModelUSDZ from "../../../models/kid/shorts/ChildNormalShort.usdz";
+import kidHeavyShortsModelUSDZ from "../../../models/kid/shorts/ChildHeavyShort.usdz";
+
+import kidNormalUndershirtModelUSDZ from "../../../models/kid/undershirt/ChildThinTShirt.usdz";
+import kidBodyUndershirtModelUSDZ from "../../../models/kid/undershirt/ChildNormalTShirt.usdz";
+import kidHeavyUndershirtModelUSDZ from "../../../models/kid/undershirt/ChildHeavyTShirt.usdz";
 
 
 // Список вопросов представляет из себя все возможные варианты (дерево)
@@ -143,7 +189,10 @@ const questionsList = {
                                     id: "1",
                                     value: "ПРИМЕРИТЬ",
                                     image: manUndershirtImage,
-                                    model: manNormalUndershirtModel,
+                                    model: {
+                                        GLB: manNormalUndershirtModel,
+                                        USDZ: manNormalUndershirtModelUSDZ,
+                                    }
                                 },
                             ]
                         },
@@ -155,7 +204,10 @@ const questionsList = {
                                     id: "1",
                                     value: "ПРИМЕРИТЬ",
                                     image: manPantsImage,
-                                    model: manNormalPantsModel,
+                                    model: {
+                                        GLB: manNormalPantsModel,
+                                        USDZ: manNormalPantsModelUSDZ,
+                                    }
                                 },
 
                             ]
@@ -186,7 +238,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: manUndershirtImage,
-                                model: manBodyUndershirtModel,
+                                model: {
+                                    GLB: manBodyUndershirtModel,
+                                    USDZ: manBodyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -198,7 +253,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: manPantsImage,
-                                model: manBodyPantsModel,
+                                model: {
+                                    GLB: manBodyPantsModel,
+                                    USDZ: manBodyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         }
@@ -228,7 +286,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: manUndershirtImage,
-                                model: manHeavyUndershirtModel,
+                                model: {
+                                    GLB: manHeavyUndershirtModel,
+                                    USDZ: manHeavyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -240,7 +301,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: manPantsImage,
-                                model: manHeavyPantsModel,
+                                model: {
+                                    GLB: manHeavyPantsModel,
+                                    USDZ: manHeavyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         }
@@ -308,7 +372,10 @@ const questionsList = {
                                     id: "1",
                                     value: "ПРИМЕРИТЬ",
                                     image: womanDressImage,
-                                    model: womanNormalDressModel,
+                                    model: {
+                                        GLB: womanNormalDressModel,
+                                        USDZ: womanNormalDressModelUSDZ,
+                                    }
                                 },
                             ]
                         },
@@ -320,7 +387,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanUndershirtImage,
-                                model: womanNormalUndershirtModel,
+                                model: {
+                                    GLB: womanNormalUndershirtModel,
+                                    USDZ: womanNormalUndershirtModelUSDZ,
+                                }
                             },
                         ]
                         },
@@ -332,7 +402,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanShortsImage,
-                                model: womanNormalShortsModel,
+                                model: {
+                                    GLB: womanNormalShortsModel,
+                                    USDZ: womanNormalShortsModelUSDZ,
+                                }
                             },
                         ]
                         },
@@ -344,7 +417,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanSkirtImage,
-                                model: womanNormalSkirtModel,
+                                model: {
+                                    GLB: womanNormalSkirtModel,
+                                    USDZ: womanNormalSkirtModelUSDZ,
+                                }
                             },
                         ]
                         },
@@ -356,7 +432,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanPantsImage,
-                                model: womanNormalPantsModel,
+                                model: {
+                                    GLB: womanNormalPantsModel,
+                                    USDZ: womanNormalPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -401,7 +480,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanDressImage,
-                                model: womanBodyDressModel,
+                                model: {
+                                    GLB: womanBodyDressModel,
+                                    USDZ: womanBodyDressModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -413,7 +495,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanUndershirtImage,
-                                model: womanBodyUndershirtModel,
+                                model: {
+                                    GLB: womanBodyUndershirtModel,
+                                    USDZ: womanBodyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -425,7 +510,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanShortsImage,
-                                model: womanBodyShortsModel,
+                                model: {
+                                    GLB: womanBodyShortsModel,
+                                    USDZ: womanBodyShortsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -437,7 +525,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanSkirtImage,
-                                model: womanBodySkirtModel,
+                                model: {
+                                    GLB: womanBodySkirtModel,
+                                    USDZ: womanBodySkirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -449,7 +540,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanPantsImage,
-                                model: womanBodyPantsModel,
+                                model: {
+                                    GLB: womanBodyPantsModel,
+                                    USDZ: womanBodyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -494,7 +588,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanDressImage,
-                                model: womanHeavyDressModel,
+                                model: {
+                                    GLB: womanHeavyDressModel,
+                                    USDZ: womanHeavyDressModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -506,7 +603,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanUndershirtImage,
-                                model: womanHeavyUndershirtModel,
+                                model: {
+                                    GLB: womanHeavyUndershirtModel,
+                                    USDZ: womanHeavyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -518,7 +618,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanShortsImage,
-                                model: womanHeavyShortsModel,
+                                model: {
+                                    GLB: womanHeavyShortsModel,
+                                    USDZ: womanHeavyShortsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -530,7 +633,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanSkirtImage,
-                                model: womanHeavySkirtModel,
+                                model: {
+                                    GLB: womanHeavySkirtModel,
+                                    USDZ: womanHeavySkirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -542,7 +648,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: womanPantsImage,
-                                model: womanHeavyPantsModel,
+                                model: {
+                                    GLB: womanHeavyPantsModel,
+                                    USDZ: womanHeavyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -601,7 +710,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidUndershirtImage,
-                                model: kidNormalUndershirtModel,
+                                model: {
+                                    GLB: kidNormalUndershirtModel,
+                                    USDZ: kidNormalUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -613,7 +725,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidShortsImage,
-                                model: kidNormalShortsModel,
+                                model: {
+                                    GLB: kidNormalShortsModel,
+                                    USDZ: kidNormalShortsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -625,7 +740,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidPantsImage,
-                                model: kidNormalPantsModel,
+                                model: {
+                                    GLB: kidNormalPantsModel,
+                                    USDZ: kidNormalPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -661,7 +779,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidUndershirtImage,
-                                model: kidBodyUndershirtModel,
+                                model: {
+                                    GLB: kidBodyUndershirtModel,
+                                    USDZ: kidBodyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -673,7 +794,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidShortsImage,
-                                model: kidBodyShortsModel,
+                                model: {
+                                    GLB: kidBodyShortsModel,
+                                    USDZ: kidBodyShortsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -685,7 +809,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidPantsImage,
-                                model: kidBodyPantsModel,
+                                model: {
+                                    GLB: kidBodyPantsModel,
+                                    USDZ: kidBodyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -721,7 +848,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidUndershirtImage,
-                                model: kidHeavyUndershirtModel,
+                                model: {
+                                    GLB: kidHeavyUndershirtModel,
+                                    USDZ: kidHeavyUndershirtModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -733,7 +863,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidShortsImage,
-                                model: kidHeavyShortsModel,
+                                model: {
+                                    GLB: kidHeavyShortsModel,
+                                    USDZ: kidHeavyShortsModelUSDZ,
+                                }
                                 },
                             ]
                         },
@@ -745,7 +878,10 @@ const questionsList = {
                                 id: "1",
                                 value: "ПРИМЕРИТЬ",
                                 image: kidPantsImage,
-                                model: kidHeavyPantsModel,
+                                model: {
+                                    GLB: kidHeavyPantsModel,
+                                    USDZ: kidHeavyPantsModelUSDZ,
+                                }
                                 },
                             ]
                         },

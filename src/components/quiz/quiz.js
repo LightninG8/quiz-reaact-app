@@ -125,8 +125,18 @@ class Quiz extends React.Component {
                 <div className="quiz__result modal__body">
                     <h2 className="modal__title">Результат</h2>
                     <div className="quiz__result_model">
-                        <model-viewer src={this.state.resultQuestion.answers[this.state.lastId - 1].model} id="model-viewer" ios-src="./assets/logo.usdz" alt="Посмотри на логотип ГК «INGRAD» в дополненной реальности!" background-color="darkgray" 
-                            link="https://www.ingrad.ru/" auto-rotate ar ar-modes="webxr scene-viewer quick-look" quick-look-browsers="safari chrome" ar-scale="auto" camera-controls>
+                        <model-viewer 
+                            src={this.state.resultQuestion.answers[this.state.lastId - 1].model.GLB} 
+                            ios-src={this.state.resultQuestion.answers[this.state.lastId - 1].model.USDZ} 
+                            id="model-viewer" alt="Посмотри на логотип ГК «INGRAD» в дополненной реальности!" 
+                            background-color="darkgray" 
+                            link="https://www.ingrad.ru/" 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look" 
+                            quick-look-browsers="safari chrome" 
+                            ar-scale="auto" 
+                            camera-controls>
                                 <button slot="ar-button" className="modal__button button">ПОСМОТРЕТЬ В AR</button>
                         </model-viewer>
                     </div>
