@@ -104,6 +104,7 @@ class Quiz extends React.Component {
         this.setState( () => ({
             isStart: true,
             isFinish: false,
+            questionNumber: 0,
         }));
     };
     finishQuiz = (id) => {
@@ -112,7 +113,6 @@ class Quiz extends React.Component {
             isFinish: true,
             isModalClose: false,
             curId: "",
-            questionNumber: 0,
             result: [],
             resultQuestion: state.question,
             question: questionsList,        
