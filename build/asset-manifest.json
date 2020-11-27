@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.b5c9632b.chunk.css",
-    "main.js": "./static/js/main.3723d3ca.chunk.js",
-    "main.js.map": "./static/js/main.3723d3ca.chunk.js.map",
+    "main.js": "./static/js/main.17c08fa5.chunk.js",
+    "main.js.map": "./static/js/main.17c08fa5.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.03082609.js",
     "runtime-main.js.map": "./static/js/runtime-main.03082609.js.map",
     "static/js/2.4bd0096d.chunk.js": "./static/js/2.4bd0096d.chunk.js",
@@ -16,6 +16,9 @@
     "static/media/ChildNormalShort.2d763700.glb": "./static/media/ChildNormalShort.2d763700.glb",
     "static/media/ChildNormalShtani.55200b89.glb": "./static/media/ChildNormalShtani.55200b89.glb",
     "static/media/ChildNormalTShirt.3c8d795f.glb": "./static/media/ChildNormalTShirt.3c8d795f.glb",
+    "static/media/ChildShort.42b3f977.png": "./static/media/ChildShort.42b3f977.png",
+    "static/media/ChildShtani.e821cd30.png": "./static/media/ChildShtani.e821cd30.png",
+    "static/media/ChildTShirt.140cf950.png": "./static/media/ChildTShirt.140cf950.png",
     "static/media/ChildThinShort.b102a006.glb": "./static/media/ChildThinShort.b102a006.glb",
     "static/media/ChildThinShtani.6369dc22.glb": "./static/media/ChildThinShtani.6369dc22.glb",
     "static/media/ChildThinTShirt.a4a55ae5.glb": "./static/media/ChildThinTShirt.a4a55ae5.glb",
@@ -25,6 +28,8 @@
     "static/media/ManHeavyTShirt.67a38eee.glb": "./static/media/ManHeavyTShirt.67a38eee.glb",
     "static/media/ManNormalShtani.fa0577b6.glb": "./static/media/ManNormalShtani.fa0577b6.glb",
     "static/media/ManNormalTShirt.3489bbfc.glb": "./static/media/ManNormalTShirt.3489bbfc.glb",
+    "static/media/ManShtani.1e4f7cda.png": "./static/media/ManShtani.1e4f7cda.png",
+    "static/media/ManTShirt.677a59c5.png": "./static/media/ManTShirt.677a59c5.png",
     "static/media/WomanDress1.b4047378.png": "./static/media/WomanDress1.b4047378.png",
     "static/media/WomanShort1.0a497ade.png": "./static/media/WomanShort1.0a497ade.png",
     "static/media/WomanShtani1.21c0cbec.png": "./static/media/WomanShtani1.21c0cbec.png",
@@ -55,7 +60,6 @@
     "static/media/child-thin.f798f576.png": "./static/media/child-thin.f798f576.png",
     "static/media/circles-mobile.9f709a0d.png": "./static/media/circles-mobile.9f709a0d.png",
     "static/media/circles.e36181ca.png": "./static/media/circles.e36181ca.png",
-    "static/media/dress 1.c3befce4.png": "./static/media/dress 1.c3befce4.png",
     "static/media/man-body.aa478adf.png": "./static/media/man-body.aa478adf.png",
     "static/media/man-heavy.65e630bc.png": "./static/media/man-heavy.65e630bc.png",
     "static/media/man-normal.a9ba9702.png": "./static/media/man-normal.a9ba9702.png",
@@ -66,9 +70,9 @@
     "static/media/woman-thin.06fb97d6.png": "./static/media/woman-thin.06fb97d6.png"
   },
   "entrypoints": [
-    "../js/runtime-main.03082609.js",
-    "../js/2.4bd0096d.chunk.js",
-    "../css/main.b5c9632b.chunk.css",
-    "../js/main.3723d3ca.chunk.js"
+    "./js/runtime-main.03082609.js",
+    "./js/2.4bd0096d.chunk.js",
+    "./css/main.b5c9632b.chunk.css",
+    "./js/main.17c08fa5.chunk.js"
   ]
 }
