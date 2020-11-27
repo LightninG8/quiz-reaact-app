@@ -166,7 +166,7 @@
 				font-size: 1.2rem;
 			}
 			&_image{
-				top: -25%;
+				bottom: 28%;
 
 				& img {
 					width: 73px;
@@ -345,11 +345,14 @@
 
 		&_image {
 			position: absolute;
-			top: -50%;
+			bottom: 20%;
 			left: 50%;
 
+			transform: translateX(-50%);
 
-			transform: translate(-50%, -10%);
+			img {
+				width: 125px;
+			}
 		}
 	}
 
