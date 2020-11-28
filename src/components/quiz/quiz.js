@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import "./quiz.scss";
 
 // Компоненты
-// import answersList from "./static-values/answers-list";
 import questionsList from "./static-values/questions-list";
 
 import AnswerItem from "../answer-item";
