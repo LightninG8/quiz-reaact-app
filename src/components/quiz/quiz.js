@@ -118,7 +118,9 @@ class Quiz extends React.Component {
             lastId: id
         }));
     };
-    renderModalWindow  = () => {
+    renderModalWindow  = () => {    
+        document.documentElement.style.overflow = 'hidden';
+        
         return (   
             <div className="quiz__modal modal">
                 <div className="quiz__result modal__body">
@@ -149,6 +151,9 @@ class Quiz extends React.Component {
         );
     };
     closeModal = () => {
+        // Когда модальное окно скрыто...
+        document.documentElement.style.overflow = '';
+
         this.setState( () => ({
             isModalClose: true,
             isFinish: false,
